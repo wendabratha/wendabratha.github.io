@@ -1,1 +1,2809 @@
-"Hello World! Welcome to wendabratha website" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wendabratha.github.io</title>
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/4a822b1d6a.js" crossorigin="anonymous"></script>
+
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <!-- navbar mobile -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            https://wendabratha.github.io
+        </a>
+    </nav>
+
+    <div class="container mt-5 mb-5">
+
+        <!-- api accordion -->
+        <div class="accordion" id="accordionExample">
+            
+            <h3>RESTful API - geoportal.kukarkab.go.id</h3>
+            <p>Akses Covid-19 KUTAI KARTANEGARA</p>
+
+            <div class="card mt-3">
+                <div class="card-header" id="headingOne">
+                    <i class="mb-0">
+                    <button class="btn btn-info collapsed mr-2" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        GET
+                    </button>
+                    /KutaiKartanegara/status
+                    </i>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        
+                        <h5 class="text-info">Usage</h5>
+                        <p>Get last update of Covid-19 Kutai Kartanegara.</p>
+                        <hr>
+                        <h5 class="text-info">Request URL</h5>
+                        <code>http://geoportal.kukarkab.go.id:8088/api/covid19kabstat/</code>
+                        <hr>
+                        <h5 class="text-info">Response (200)</h5>
+                        <pre><code>
+[
+    {
+        "id": 1,
+        "name": "Kutai Kartanegara   ",
+        "positif_penduduk": null,
+        "positif_bukan_penduduk": null,
+        "kasus_positif": "14.444 (+179)",
+        "kasus_aktif": "1.489 (+149)",
+        "kasus_sembuh": "12.691 (+29)",
+        "kasus_meninggal": "264 (+1)",
+        "date": "2021-07-12"
+    }
+]
+                        </code></pre>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <i class="mb-0">
+                    <button class="btn btn-info collapsed mr-2" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        GET
+                    </button>
+                    /KutaiKartanegara/status-seriesdata
+                    </i>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                    
+                        <h5 class="text-info">Usage</h5>
+                        <p>Get last update of Covid-19 global cases in Kutai Kartanegara, series data.</p>
+                        <hr>
+                        <h5 class="text-info">Request URL</h5>
+                        <code>http://geoportal.kukarkab.go.id:8088/api/covid19kabstatharian/</code>
+                        <hr>
+                        <h5 class="text-info">Response (200)</h5>
+                        <pre style="max-height: 250px;"><code>
+[
+    {
+        "id": 1,
+        "name": "Kutai Kartanegara",
+        "positif_penduduk": 12486,
+        "positif_bukan_penduduk": 803,
+        "kasus_positif": 13289,
+        "kasus_aktif": 617,
+        "kasus_sembuh": 12429,
+        "kasus_meninggal": 243,
+        "date": "2021-07-04"
+    },
+    {
+        "id": 2,
+        "name": "Kutai Kartanegara",
+        "positif_penduduk": 12535,
+        "positif_bukan_penduduk": 803,
+        "kasus_positif": 13338,
+        "kasus_aktif": 646,
+        "kasus_sembuh": 12444,
+        "kasus_meninggal": 248,
+        "date": "2021-07-05"
+    },
+    {
+        "id": 3,
+        "name": "Kutai Kartanegara",
+        "positif_penduduk": 12609,
+        "positif_bukan_penduduk": 803,
+        "kasus_positif": 13412,
+        "kasus_aktif": 687,
+        "kasus_sembuh": 12476,
+        "kasus_meninggal": 249,
+        "date": "2021-07-06"
+    },
+    {
+        "id": 4,
+        "name": "Kutai Kartanegara",
+        "positif_penduduk": 12752,
+        "positif_bukan_penduduk": 803,
+        "kasus_positif": 13555,
+        "kasus_aktif": 776,
+        "kasus_sembuh": 12528,
+        "kasus_meninggal": 253,
+        "date": "2021-07-07"
+    },
+    {
+        "id": 5,
+        "name": "Kutai Kartanegara",
+        "positif_penduduk": 12967,
+        "positif_bukan_penduduk": 803,
+        "kasus_positif": 13770,
+        "kasus_aktif": 972,
+        "kasus_sembuh": 12541,
+        "kasus_meninggal": 257,
+        "date": "2021-07-08"
+    },
+    {
+        "id": 6,
+        "name": "Kutai Kartanegara",
+        "positif_penduduk": 13095,
+        "positif_bukan_penduduk": 803,
+        "kasus_positif": 13898,
+        "kasus_aktif": 1062,
+        "kasus_sembuh": 12579,
+        "kasus_meninggal": 257,
+        "date": "2021-07-09"
+    },
+    {
+        "id": 7,
+        "name": "Kutai Kartanegara",
+        "positif_penduduk": 13275,
+        "positif_bukan_penduduk": 803,
+        "kasus_positif": 14078,
+        "kasus_aktif": 1193,
+        "kasus_sembuh": 12626,
+        "kasus_meninggal": 259,
+        "date": "2021-07-10"
+    },
+    {
+        "id": 8,
+        "name": "Kutai Kartanegara",
+        "positif_penduduk": 13462,
+        "positif_bukan_penduduk": 803,
+        "kasus_positif": 14265,
+        "kasus_aktif": 1340,
+        "kasus_sembuh": 12662,
+        "kasus_meninggal": 253,
+        "date": "2021-07-11"
+    },
+    {
+        "id": 9,
+        "name": "Kutai Kartanegara",
+        "positif_penduduk": 13641,
+        "positif_bukan_penduduk": 803,
+        "kasus_positif": 14444,
+        "kasus_aktif": 1489,
+        "kasus_sembuh": 12691,
+        "kasus_meninggal": 264,
+        "date": "2021-07-12"
+    }
+]
+                        </code></pre>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card mt-3">
+                <div class="card-header" id="headingThree">
+                    <i class="mb-0">
+                    <button class="btn btn-info collapsed mr-2" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                        GET
+                    </button>
+                    /KutaiKartanegara/kecamatan/status
+                    </i>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingOThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        
+                        <h5 class="text-info">Usage</h5>
+                        <p>Get last update of Covid-19 Kutai Kartanegara Kecamatan status.</p>
+                        <hr>
+                        <h5 class="text-info">Request URL</h5>
+                        <code>http://geoportal.kukarkab.go.id:8088/api/covid19kecstat/</code>
+                        <hr>
+                        <h5 class="text-info">Response (200)</h5>
+                        <pre><code>
+[
+    {
+        "attributes": {
+            "id": 1,
+            "kode_join": 640201,
+            "kecamatan": "Muara Muntai",
+            "positif_penduduk": 113,
+            "positif_bukan_penduduk": 0,
+            "kasus_posi": 113,
+            "kasus_aktif": 19,
+            "kasus_semb": 93,
+            "kasus_meni": 1,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 2,
+            "kode_join": 640202,
+            "kecamatan": "Loa Kulu",
+            "positif_penduduk": 757,
+            "positif_bukan_penduduk": 24,
+            "kasus_posi": 796,
+            "kasus_aktif": 133,
+            "kasus_semb": 643,
+            "kasus_meni": 20,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 3,
+            "kode_join": 640203,
+            "kecamatan": "Loa Janan",
+            "positif_penduduk": 799,
+            "positif_bukan_penduduk": 17,
+            "kasus_posi": 816,
+            "kasus_aktif": 74,
+            "kasus_semb": 740,
+            "kasus_meni": 2,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 4,
+            "kode_join": 640204,
+            "kecamatan": "Anggana",
+            "positif_penduduk": 361,
+            "positif_bukan_penduduk": 43,
+            "kasus_posi": 404,
+            "kasus_aktif": 54,
+            "kasus_semb": 345,
+            "kasus_meni": 5,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 5,
+            "kode_join": 640205,
+            "kecamatan": "Muara Badak",
+            "positif_penduduk": 748,
+            "positif_bukan_penduduk": 2,
+            "kasus_posi": 750,
+            "kasus_aktif": 142,
+            "kasus_semb": 597,
+            "kasus_meni": 11,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 6,
+            "kode_join": 640206,
+            "kecamatan": "Tenggarong",
+            "positif_penduduk": 5052,
+            "positif_bukan_penduduk": 17,
+            "kasus_posi": 5069,
+            "kasus_aktif": 471,
+            "kasus_semb": 4499,
+            "kasus_meni": 99,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 7,
+            "kode_join": 640207,
+            "kecamatan": "Sebulu",
+            "positif_penduduk": 715,
+            "positif_bukan_penduduk": 1,
+            "kasus_posi": 716,
+            "kasus_aktif": 77,
+            "kasus_semb": 621,
+            "kasus_meni": 18,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 8,
+            "kode_join": 640208,
+            "kecamatan": "Kota Bangun",
+            "positif_penduduk": 255,
+            "positif_bukan_penduduk": 1,
+            "kasus_posi": 256,
+            "kasus_aktif": 8,
+            "kasus_semb": 243,
+            "kasus_meni": 5,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 9,
+            "kode_join": 640209,
+            "kecamatan": "Kenohan",
+            "positif_penduduk": 102,
+            "positif_bukan_penduduk": 10,
+            "kasus_posi": 112,
+            "kasus_aktif": 6,
+            "kasus_semb": 104,
+            "kasus_meni": 2,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 10,
+            "kode_join": 640210,
+            "kecamatan": "Kembang Janggut",
+            "positif_penduduk": 256,
+            "positif_bukan_penduduk": 1,
+            "kasus_posi": 257,
+            "kasus_aktif": 8,
+            "kasus_semb": 242,
+            "kasus_meni": 7,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 11,
+            "kode_join": 640211,
+            "kecamatan": "Muara Kaman",
+            "positif_penduduk": 263,
+            "positif_bukan_penduduk": 1,
+            "kasus_posi": 264,
+            "kasus_aktif": 27,
+            "kasus_semb": 230,
+            "kasus_meni": 7,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 12,
+            "kode_join": 640212,
+            "kecamatan": "Tabang",
+            "positif_penduduk": 374,
+            "positif_bukan_penduduk": 39,
+            "kasus_posi": 413,
+            "kasus_aktif": 12,
+            "kasus_semb": 400,
+            "kasus_meni": 1,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 13,
+            "kode_join": 640213,
+            "kecamatan": "Samboja",
+            "positif_penduduk": 1076,
+            "positif_bukan_penduduk": 17,
+            "kasus_posi": 1093,
+            "kasus_aktif": 108,
+            "kasus_semb": 974,
+            "kasus_meni": 11,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 14,
+            "kode_join": 640214,
+            "kecamatan": "Muara Jawa",
+            "positif_penduduk": 600,
+            "positif_bukan_penduduk": 30,
+            "kasus_posi": 630,
+            "kasus_aktif": 43,
+            "kasus_semb": 584,
+            "kasus_meni": 3,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 15,
+            "kode_join": 640215,
+            "kecamatan": "Sanga Sanga",
+            "positif_penduduk": 357,
+            "positif_bukan_penduduk": 7,
+            "kasus_posi": 364,
+            "kasus_aktif": 81,
+            "kasus_semb": 276,
+            "kasus_meni": 7,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 16,
+            "kode_join": 640216,
+            "kecamatan": "Tenggarong Seberang",
+            "positif_penduduk": 1644,
+            "positif_bukan_penduduk": 85,
+            "kasus_posi": 1729,
+            "kasus_aktif": 167,
+            "kasus_semb": 1533,
+            "kasus_meni": 29,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 17,
+            "kode_join": 640217,
+            "kecamatan": "Marangkayu",
+            "positif_penduduk": 280,
+            "positif_bukan_penduduk": 3,
+            "kasus_posi": 383,
+            "kasus_aktif": 58,
+            "kasus_semb": 320,
+            "kasus_meni": 5,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 18,
+            "kode_join": 640218,
+            "kecamatan": "Muara Wis",
+            "positif_penduduk": 58,
+            "positif_bukan_penduduk": 0,
+            "kasus_posi": 58,
+            "kasus_aktif": 1,
+            "kasus_semb": 57,
+            "kasus_meni": 0,
+            "date": "2021-07-12"
+        }
+    }
+]
+                        </code></pre>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card mt-3">
+                <div class="card-header" id="heading4">
+                    <i class="mb-0">
+                    <button class="btn btn-info collapsed mr-2" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                        GET
+                    </button>
+                    /KutaiKartanegara/kecamatan/status-seriesdata
+                    </i>
+                </div>
+                <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+                    <div class="card-body">
+                        
+                        <h5 class="text-info">Usage</h5>
+                        <p>Get last update of Covid-19 Kutai Kartanegara kecamatan status, series data.</p>
+                        <hr>
+                        <h5 class="text-info">Request URL</h5>
+                        <code>http://geoportal.kukarkab.go.id:8088/api/covid19kecstatharian/</code>
+                        <hr>
+                        <h5 class="text-info">Response (200)</h5>
+                        <pre><code>
+[
+    {
+        "attributes": {
+            "id": 1,
+            "kode_join": 640201,
+            "kecamatan": "Muara Muntai",
+            "positif_penduduk": 94,
+            "positif_bukan_penduduk": 0,
+            "kasus_positif": 94,
+            "kasus_aktif": 2,
+            "kasus_sembuh": 91,
+            "kasus_meninggal": 1,
+            "date": "2021-07-04"
+        }
+    },
+    {
+        "attributes": {
+            "id": 2,
+            "kode_join": 640202,
+            "kecamatan": "Loa Kulu",
+            "positif_penduduk": 660,
+            "positif_bukan_penduduk": 24,
+            "kasus_positif": 684,
+            "kasus_aktif": 46,
+            "kasus_sembuh": 619,
+            "kasus_meninggal": 19,
+            "date": "2021-07-04"
+        }
+    },
+    {
+        "attributes": {
+            "id": 3,
+            "kode_join": 640203,
+            "kecamatan": "Loa Janan",
+            "positif_penduduk": 736,
+            "positif_bukan_penduduk": 17,
+            "kasus_positif": 753,
+            "kasus_aktif": 32,
+            "kasus_sembuh": 719,
+            "kasus_meninggal": 2,
+            "date": "2021-07-04"
+        }
+    },
+    {
+        "attributes": {
+            "id": 4,
+            "kode_join": 640204,
+            "kecamatan": "Anggana",
+            "positif_penduduk": 308,
+            "positif_bukan_penduduk": 43,
+            "kasus_positif": 351,
+            "kasus_aktif": 13,
+            "kasus_sembuh": 333,
+            "kasus_meninggal": 5,
+            "date": "2021-07-04"
+        }
+    },
+    {
+        "attributes": {
+            "id": 5,
+            "kode_join": 640205,
+            "kecamatan": "Muara Badak",
+            "positif_penduduk": 644,
+            "positif_bukan_penduduk": 2,
+            "kasus_positif": 646,
+            "kasus_aktif": 60,
+            "kasus_sembuh": 579,
+            "kasus_meninggal": 7,
+            "date": "2021-07-04"
+        }
+    },
+    {
+        "attributes": {
+            "id": 6,
+            "kode_join": 640206,
+            "kecamatan": "Tenggarong",
+            "positif_penduduk": 4724,
+            "positif_bukan_penduduk": 17,
+            "kasus_positif": 4741,
+            "kasus_aktif": 214,
+            "kasus_sembuh": 4432,
+            "kasus_meninggal": 95,
+            "date": "2021-07-04"
+        }
+    },
+    {
+        "attributes": {
+            "id": 7,
+            "kode_join": 640207,
+            "kecamatan": "Sebulu",
+            "positif_penduduk": 660,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 661,
+            "kasus_aktif": 30,
+            "kasus_sembuh": 614,
+            "kasus_meninggal": 17,
+            "date": "2021-07-04"
+        }
+    },
+    {
+        "attributes": {
+            "id": 8,
+            "kode_join": 640208,
+            "kecamatan": "Kota Bangun",
+            "positif_penduduk": 249,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 250,
+            "kasus_aktif": 8,
+            "kasus_sembuh": 237,
+            "kasus_meninggal": 5,
+            "date": "2021-07-04"
+        }
+    },
+    {
+        "attributes": {
+            "id": 9,
+            "kode_join": 640209,
+            "kecamatan": "Kenohan",
+            "positif_penduduk": 98,
+            "positif_bukan_penduduk": 10,
+            "kasus_positif": 108,
+            "kasus_aktif": 3,
+            "kasus_sembuh": 103,
+            "kasus_meninggal": 2,
+            "date": "2021-07-04"
+        }
+    },
+    {
+        "attributes": {
+            "id": 10,
+            "kode_join": 640210,
+            "kecamatan": "Kembang Janggut",
+            "positif_penduduk": 249,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 250,
+            "kasus_aktif": 3,
+            "kasus_sembuh": 240,
+            "kasus_meninggal": 7,
+            "date": "2021-07-04"
+        }
+    },
+    {
+        "attributes": {
+            "id": 11,
+            "kode_join": 640211,
+            "kecamatan": "Muara Kaman",
+            "positif_penduduk": 224,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 225,
+            "kasus_aktif": 10,
+            "kasus_sembuh": 208,
+            "kasus_meninggal": 7,
+            "date": "2021-07-04"
+        }
+    },
+    {
+        "attributes": {
+            "id": 12,
+            "kode_join": 640212,
+            "kecamatan": "Tabang",
+            "positif_penduduk": 368,
+            "positif_bukan_penduduk": 39,
+            "kasus_positif": 407,
+            "kasus_aktif": 9,
+            "kasus_sembuh": 397,
+            "kasus_meninggal": 1,
+            "date": "2021-07-04"
+        }
+    },
+    {
+        "attributes": {
+            "id": 13,
+            "kode_join": 640213,
+            "kecamatan": "Samboja",
+            "positif_penduduk": 1000,
+            "positif_bukan_penduduk": 14,
+            "kasus_positif": 1014,
+            "kasus_aktif": 47,
+            "kasus_sembuh": 956,
+            "kasus_meninggal": 11,
+            "date": "2021-07-04"
+        }
+    },
+    {
+        "attributes": {
+            "id": 14,
+            "kode_join": 640214,
+            "kecamatan": "Muara jawa",
+            "positif_penduduk": 579,
+            "positif_bukan_penduduk": 30,
+            "kasus_positif": 609,
+            "kasus_aktif": 16,
+            "kasus_sembuh": 591,
+            "kasus_meninggal": 2,
+            "date": "2021-07-04"
+        }
+    },
+    {
+        "attributes": {
+            "id": 15,
+            "kode_join": 640215,
+            "kecamatan": "Sanga Sanga",
+            "positif_penduduk": 289,
+            "positif_bukan_penduduk": 7,
+            "kasus_positif": 296,
+            "kasus_aktif": 24,
+            "kasus_sembuh": 268,
+            "kasus_meninggal": 4,
+            "date": "2021-07-04"
+        }
+    },
+    {
+        "attributes": {
+            "id": 16,
+            "kode_join": 640216,
+            "kecamatan": "Tenggarong Seberang",
+            "positif_penduduk": 1502,
+            "positif_bukan_penduduk": 85,
+            "kasus_positif": 1587,
+            "kasus_aktif": 90,
+            "kasus_sembuh": 1475,
+            "kasus_meninggal": 22,
+            "date": "2021-07-04"
+        }
+    },
+    {
+        "attributes": {
+            "id": 17,
+            "kode_join": 640217,
+            "kecamatan": "Marangkayu",
+            "positif_penduduk": 329,
+            "positif_bukan_penduduk": 3,
+            "kasus_positif": 332,
+            "kasus_aktif": 10,
+            "kasus_sembuh": 317,
+            "kasus_meninggal": 5,
+            "date": "2021-07-04"
+        }
+    },
+    {
+        "attributes": {
+            "id": 18,
+            "kode_join": 640218,
+            "kecamatan": "Muara Wis",
+            "positif_penduduk": 56,
+            "positif_bukan_penduduk": 0,
+            "kasus_positif": 56,
+            "kasus_aktif": 0,
+            "kasus_sembuh": 56,
+            "kasus_meninggal": 0,
+            "date": "2021-07-04"
+        }
+    },
+    {
+        "attributes": {
+            "id": 19,
+            "kode_join": 640201,
+            "kecamatan": "Muara Muntai",
+            "positif_penduduk": 95,
+            "positif_bukan_penduduk": 0,
+            "kasus_positif": 95,
+            "kasus_aktif": 3,
+            "kasus_sembuh": 91,
+            "kasus_meninggal": 1,
+            "date": "2021-07-05"
+        }
+    },
+    {
+        "attributes": {
+            "id": 20,
+            "kode_join": 640202,
+            "kecamatan": "Loa Kulu",
+            "positif_penduduk": 663,
+            "positif_bukan_penduduk": 24,
+            "kasus_positif": 687,
+            "kasus_aktif": 49,
+            "kasus_sembuh": 619,
+            "kasus_meninggal": 19,
+            "date": "2021-07-05"
+        }
+    },
+    {
+        "attributes": {
+            "id": 21,
+            "kode_join": 640203,
+            "kecamatan": "Loa Janan",
+            "positif_penduduk": 736,
+            "positif_bukan_penduduk": 17,
+            "kasus_positif": 753,
+            "kasus_aktif": 32,
+            "kasus_sembuh": 719,
+            "kasus_meninggal": 2,
+            "date": "2021-07-05"
+        }
+    },
+    {
+        "attributes": {
+            "id": 22,
+            "kode_join": 640204,
+            "kecamatan": "Anggana",
+            "positif_penduduk": 309,
+            "positif_bukan_penduduk": 43,
+            "kasus_positif": 352,
+            "kasus_aktif": 13,
+            "kasus_sembuh": 334,
+            "kasus_meninggal": 5,
+            "date": "2021-07-05"
+        }
+    },
+    {
+        "attributes": {
+            "id": 23,
+            "kode_join": 640205,
+            "kecamatan": "Muara Badak",
+            "positif_penduduk": 651,
+            "positif_bukan_penduduk": 2,
+            "kasus_positif": 653,
+            "kasus_aktif": 66,
+            "kasus_sembuh": 579,
+            "kasus_meninggal": 8,
+            "date": "2021-07-05"
+        }
+    },
+    {
+        "attributes": {
+            "id": 24,
+            "kode_join": 640206,
+            "kecamatan": "Tenggarong",
+            "positif_penduduk": 4739,
+            "positif_bukan_penduduk": 17,
+            "kasus_positif": 4756,
+            "kasus_aktif": 227,
+            "kasus_sembuh": 4433,
+            "kasus_meninggal": 96,
+            "date": "2021-07-05"
+        }
+    },
+    {
+        "attributes": {
+            "id": 25,
+            "kode_join": 640207,
+            "kecamatan": "Sebulu",
+            "positif_penduduk": 666,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 667,
+            "kasus_aktif": 36,
+            "kasus_sembuh": 614,
+            "kasus_meninggal": 17,
+            "date": "2021-07-05"
+        }
+    },
+    {
+        "attributes": {
+            "id": 26,
+            "kode_join": 640208,
+            "kecamatan": "Kota Bangun",
+            "positif_penduduk": 249,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 250,
+            "kasus_aktif": 8,
+            "kasus_sembuh": 237,
+            "kasus_meninggal": 5,
+            "date": "2021-07-05"
+        }
+    },
+    {
+        "attributes": {
+            "id": 27,
+            "kode_join": 640209,
+            "kecamatan": "Kenohan",
+            "positif_penduduk": 98,
+            "positif_bukan_penduduk": 10,
+            "kasus_positif": 108,
+            "kasus_aktif": 3,
+            "kasus_sembuh": 103,
+            "kasus_meninggal": 2,
+            "date": "2021-07-05"
+        }
+    },
+    {
+        "attributes": {
+            "id": 28,
+            "kode_join": 640210,
+            "kecamatan": "Kembang Janggut",
+            "positif_penduduk": 249,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 250,
+            "kasus_aktif": 3,
+            "kasus_sembuh": 240,
+            "kasus_meninggal": 7,
+            "date": "2021-07-05"
+        }
+    },
+    {
+        "attributes": {
+            "id": 29,
+            "kode_join": 640211,
+            "kecamatan": "Muara Kaman",
+            "positif_penduduk": 225,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 226,
+            "kasus_aktif": 11,
+            "kasus_sembuh": 208,
+            "kasus_meninggal": 7,
+            "date": "2021-07-05"
+        }
+    },
+    {
+        "attributes": {
+            "id": 30,
+            "kode_join": 640212,
+            "kecamatan": "Tabang",
+            "positif_penduduk": 369,
+            "positif_bukan_penduduk": 39,
+            "kasus_positif": 408,
+            "kasus_aktif": 10,
+            "kasus_sembuh": 397,
+            "kasus_meninggal": 1,
+            "date": "2021-07-05"
+        }
+    },
+    {
+        "attributes": {
+            "id": 31,
+            "kode_join": 640213,
+            "kecamatan": "Samboja",
+            "positif_penduduk": 1001,
+            "positif_bukan_penduduk": 14,
+            "kasus_positif": 1015,
+            "kasus_aktif": 48,
+            "kasus_sembuh": 956,
+            "kasus_meninggal": 11,
+            "date": "2021-07-05"
+        }
+    },
+    {
+        "attributes": {
+            "id": 32,
+            "kode_join": 640214,
+            "kecamatan": "Muara jawa",
+            "positif_penduduk": 579,
+            "positif_bukan_penduduk": 30,
+            "kasus_positif": 609,
+            "kasus_aktif": 16,
+            "kasus_sembuh": 591,
+            "kasus_meninggal": 2,
+            "date": "2021-07-05"
+        }
+    },
+    {
+        "attributes": {
+            "id": 33,
+            "kode_join": 640215,
+            "kecamatan": "Sanga Sanga",
+            "positif_penduduk": 292,
+            "positif_bukan_penduduk": 7,
+            "kasus_positif": 299,
+            "kasus_aktif": 26,
+            "kasus_sembuh": 268,
+            "kasus_meninggal": 5,
+            "date": "2021-07-05"
+        }
+    },
+    {
+        "attributes": {
+            "id": 34,
+            "kode_join": 640216,
+            "kecamatan": "Tenggarong Seberang",
+            "positif_penduduk": 1510,
+            "positif_bukan_penduduk": 85,
+            "kasus_positif": 1595,
+            "kasus_aktif": 83,
+            "kasus_sembuh": 1488,
+            "kasus_meninggal": 24,
+            "date": "2021-07-05"
+        }
+    },
+    {
+        "attributes": {
+            "id": 35,
+            "kode_join": 640217,
+            "kecamatan": "Marangkayu",
+            "positif_penduduk": 331,
+            "positif_bukan_penduduk": 3,
+            "kasus_positif": 334,
+            "kasus_aktif": 11,
+            "kasus_sembuh": 318,
+            "kasus_meninggal": 5,
+            "date": "2021-07-05"
+        }
+    },
+    {
+        "attributes": {
+            "id": 36,
+            "kode_join": 640218,
+            "kecamatan": "Muara Wis",
+            "positif_penduduk": 56,
+            "positif_bukan_penduduk": 0,
+            "kasus_positif": 56,
+            "kasus_aktif": 0,
+            "kasus_sembuh": 56,
+            "kasus_meninggal": 0,
+            "date": "2021-07-05"
+        }
+    },
+    {
+        "attributes": {
+            "id": 37,
+            "kode_join": 640201,
+            "kecamatan": "Muara Muntai",
+            "positif_penduduk": 95,
+            "positif_bukan_penduduk": 0,
+            "kasus_positif": 95,
+            "kasus_aktif": 3,
+            "kasus_sembuh": 91,
+            "kasus_meninggal": 1,
+            "date": "2021-07-06"
+        }
+    },
+    {
+        "attributes": {
+            "id": 38,
+            "kode_join": 640202,
+            "kecamatan": "Loa Kulu",
+            "positif_penduduk": 667,
+            "positif_bukan_penduduk": 24,
+            "kasus_positif": 691,
+            "kasus_aktif": 49,
+            "kasus_sembuh": 623,
+            "kasus_meninggal": 19,
+            "date": "2021-07-06"
+        }
+    },
+    {
+        "attributes": {
+            "id": 39,
+            "kode_join": 640203,
+            "kecamatan": "Loa Janan",
+            "positif_penduduk": 745,
+            "positif_bukan_penduduk": 17,
+            "kasus_positif": 762,
+            "kasus_aktif": 32,
+            "kasus_sembuh": 728,
+            "kasus_meninggal": 2,
+            "date": "2021-07-06"
+        }
+    },
+    {
+        "attributes": {
+            "id": 40,
+            "kode_join": 640204,
+            "kecamatan": "Anggana",
+            "positif_penduduk": 314,
+            "positif_bukan_penduduk": 43,
+            "kasus_positif": 357,
+            "kasus_aktif": 14,
+            "kasus_sembuh": 338,
+            "kasus_meninggal": 5,
+            "date": "2021-07-06"
+        }
+    },
+    {
+        "attributes": {
+            "id": 41,
+            "kode_join": 640205,
+            "kecamatan": "Muara Badak",
+            "positif_penduduk": 654,
+            "positif_bukan_penduduk": 2,
+            "kasus_positif": 656,
+            "kasus_aktif": 66,
+            "kasus_sembuh": 581,
+            "kasus_meninggal": 9,
+            "date": "2021-07-06"
+        }
+    },
+    {
+        "attributes": {
+            "id": 42,
+            "kode_join": 640206,
+            "kecamatan": "Tenggarong",
+            "positif_penduduk": 4777,
+            "positif_bukan_penduduk": 17,
+            "kasus_positif": 4794,
+            "kasus_aktif": 227,
+            "kasus_sembuh": 4471,
+            "kasus_meninggal": 96,
+            "date": "2021-07-06"
+        }
+    },
+    {
+        "attributes": {
+            "id": 43,
+            "kode_join": 640207,
+            "kecamatan": "Sebulu",
+            "positif_penduduk": 669,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 670,
+            "kasus_aktif": 36,
+            "kasus_sembuh": 617,
+            "kasus_meninggal": 17,
+            "date": "2021-07-06"
+        }
+    },
+    {
+        "attributes": {
+            "id": 44,
+            "kode_join": 640208,
+            "kecamatan": "Kota Bangun",
+            "positif_penduduk": 249,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 250,
+            "kasus_aktif": 8,
+            "kasus_sembuh": 237,
+            "kasus_meninggal": 5,
+            "date": "2021-07-06"
+        }
+    },
+    {
+        "attributes": {
+            "id": 45,
+            "kode_join": 640209,
+            "kecamatan": "Kenohan",
+            "positif_penduduk": 98,
+            "positif_bukan_penduduk": 10,
+            "kasus_positif": 108,
+            "kasus_aktif": 3,
+            "kasus_sembuh": 103,
+            "kasus_meninggal": 2,
+            "date": "2021-07-06"
+        }
+    },
+    {
+        "attributes": {
+            "id": 46,
+            "kode_join": 640210,
+            "kecamatan": "Kembang Janggut",
+            "positif_penduduk": 250,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 251,
+            "kasus_aktif": 3,
+            "kasus_sembuh": 241,
+            "kasus_meninggal": 7,
+            "date": "2021-07-06"
+        }
+    },
+    {
+        "attributes": {
+            "id": 47,
+            "kode_join": 640211,
+            "kecamatan": "Muara Kaman",
+            "positif_penduduk": 226,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 227,
+            "kasus_aktif": 11,
+            "kasus_sembuh": 209,
+            "kasus_meninggal": 7,
+            "date": "2021-07-06"
+        }
+    },
+    {
+        "attributes": {
+            "id": 48,
+            "kode_join": 640212,
+            "kecamatan": "Tabang",
+            "positif_penduduk": 370,
+            "positif_bukan_penduduk": 39,
+            "kasus_positif": 409,
+            "kasus_aktif": 10,
+            "kasus_sembuh": 398,
+            "kasus_meninggal": 1,
+            "date": "2021-07-06"
+        }
+    },
+    {
+        "attributes": {
+            "id": 49,
+            "kode_join": 640213,
+            "kecamatan": "Samboja",
+            "positif_penduduk": 1001,
+            "positif_bukan_penduduk": 14,
+            "kasus_positif": 1015,
+            "kasus_aktif": 48,
+            "kasus_sembuh": 956,
+            "kasus_meninggal": 11,
+            "date": "2021-07-06"
+        }
+    },
+    {
+        "attributes": {
+            "id": 50,
+            "kode_join": 640214,
+            "kecamatan": "Muara jawa",
+            "positif_penduduk": 579,
+            "positif_bukan_penduduk": 30,
+            "kasus_positif": 609,
+            "kasus_aktif": 16,
+            "kasus_sembuh": 591,
+            "kasus_meninggal": 2,
+            "date": "2021-07-06"
+        }
+    },
+    {
+        "attributes": {
+            "id": 51,
+            "kode_join": 640215,
+            "kecamatan": "Sanga Sanga",
+            "positif_penduduk": 295,
+            "positif_bukan_penduduk": 7,
+            "kasus_positif": 302,
+            "kasus_aktif": 26,
+            "kasus_sembuh": 271,
+            "kasus_meninggal": 5,
+            "date": "2021-07-06"
+        }
+    },
+    {
+        "attributes": {
+            "id": 52,
+            "kode_join": 640216,
+            "kecamatan": "Tenggarong Seberang",
+            "positif_penduduk": 1516,
+            "positif_bukan_penduduk": 85,
+            "kasus_positif": 1601,
+            "kasus_aktif": 83,
+            "kasus_sembuh": 1494,
+            "kasus_meninggal": 24,
+            "date": "2021-07-06"
+        }
+    },
+    {
+        "attributes": {
+            "id": 53,
+            "kode_join": 640217,
+            "kecamatan": "Marangkayu",
+            "positif_penduduk": 331,
+            "positif_bukan_penduduk": 3,
+            "kasus_positif": 334,
+            "kasus_aktif": 11,
+            "kasus_sembuh": 318,
+            "kasus_meninggal": 5,
+            "date": "2021-07-06"
+        }
+    },
+    {
+        "attributes": {
+            "id": 54,
+            "kode_join": 640218,
+            "kecamatan": "Muara Wis",
+            "positif_penduduk": 56,
+            "positif_bukan_penduduk": 0,
+            "kasus_positif": 56,
+            "kasus_aktif": 0,
+            "kasus_sembuh": 56,
+            "kasus_meninggal": 0,
+            "date": "2021-07-06"
+        }
+    },
+    {
+        "attributes": {
+            "id": 55,
+            "kode_join": 640201,
+            "kecamatan": "Muara Muntai",
+            "positif_penduduk": 95,
+            "positif_bukan_penduduk": 0,
+            "kasus_positif": 95,
+            "kasus_aktif": 3,
+            "kasus_sembuh": 91,
+            "kasus_meninggal": 1,
+            "date": "2021-07-07"
+        }
+    },
+    {
+        "attributes": {
+            "id": 56,
+            "kode_join": 640202,
+            "kecamatan": "Loa Kulu",
+            "positif_penduduk": 667,
+            "positif_bukan_penduduk": 24,
+            "kasus_positif": 691,
+            "kasus_aktif": 55,
+            "kasus_sembuh": 617,
+            "kasus_meninggal": 19,
+            "date": "2021-07-07"
+        }
+    },
+    {
+        "attributes": {
+            "id": 57,
+            "kode_join": 640203,
+            "kecamatan": "Loa Janan",
+            "positif_penduduk": 750,
+            "positif_bukan_penduduk": 17,
+            "kasus_positif": 767,
+            "kasus_aktif": 33,
+            "kasus_sembuh": 732,
+            "kasus_meninggal": 2,
+            "date": "2021-07-07"
+        }
+    },
+    {
+        "attributes": {
+            "id": 58,
+            "kode_join": 640204,
+            "kecamatan": "Anggana",
+            "positif_penduduk": 321,
+            "positif_bukan_penduduk": 43,
+            "kasus_positif": 364,
+            "kasus_aktif": 19,
+            "kasus_sembuh": 340,
+            "kasus_meninggal": 5,
+            "date": "2021-07-07"
+        }
+    },
+    {
+        "attributes": {
+            "id": 59,
+            "kode_join": 640205,
+            "kecamatan": "Muara Badak",
+            "positif_penduduk": 671,
+            "positif_bukan_penduduk": 2,
+            "kasus_positif": 673,
+            "kasus_aktif": 83,
+            "kasus_sembuh": 581,
+            "kasus_meninggal": 9,
+            "date": "2021-07-07"
+        }
+    },
+    {
+        "attributes": {
+            "id": 60,
+            "kode_join": 640206,
+            "kecamatan": "Tenggarong",
+            "positif_penduduk": 4828,
+            "positif_bukan_penduduk": 17,
+            "kasus_positif": 4845,
+            "kasus_aktif": 260,
+            "kasus_sembuh": 4488,
+            "kasus_meninggal": 97,
+            "date": "2021-07-07"
+        }
+    },
+    {
+        "attributes": {
+            "id": 61,
+            "kode_join": 640207,
+            "kecamatan": "Sebulu",
+            "positif_penduduk": 674,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 675,
+            "kasus_aktif": 38,
+            "kasus_sembuh": 620,
+            "kasus_meninggal": 17,
+            "date": "2021-07-07"
+        }
+    },
+    {
+        "attributes": {
+            "id": 62,
+            "kode_join": 640208,
+            "kecamatan": "Kota Bangun",
+            "positif_penduduk": 249,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 250,
+            "kasus_aktif": 7,
+            "kasus_sembuh": 238,
+            "kasus_meninggal": 5,
+            "date": "2021-07-07"
+        }
+    },
+    {
+        "attributes": {
+            "id": 63,
+            "kode_join": 640209,
+            "kecamatan": "Kenohan",
+            "positif_penduduk": 100,
+            "positif_bukan_penduduk": 10,
+            "kasus_positif": 110,
+            "kasus_aktif": 5,
+            "kasus_sembuh": 103,
+            "kasus_meninggal": 2,
+            "date": "2021-07-07"
+        }
+    },
+    {
+        "attributes": {
+            "id": 64,
+            "kode_join": 640210,
+            "kecamatan": "Kembang Janggut",
+            "positif_penduduk": 250,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 251,
+            "kasus_aktif": 2,
+            "kasus_sembuh": 242,
+            "kasus_meninggal": 7,
+            "date": "2021-07-07"
+        }
+    },
+    {
+        "attributes": {
+            "id": 65,
+            "kode_join": 640211,
+            "kecamatan": "Muara Kaman",
+            "positif_penduduk": 226,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 227,
+            "kasus_aktif": 11,
+            "kasus_sembuh": 209,
+            "kasus_meninggal": 7,
+            "date": "2021-07-07"
+        }
+    },
+    {
+        "attributes": {
+            "id": 66,
+            "kode_join": 640212,
+            "kecamatan": "Tabang",
+            "positif_penduduk": 370,
+            "positif_bukan_penduduk": 39,
+            "kasus_positif": 409,
+            "kasus_aktif": 10,
+            "kasus_sembuh": 398,
+            "kasus_meninggal": 1,
+            "date": "2021-07-07"
+        }
+    },
+    {
+        "attributes": {
+            "id": 67,
+            "kode_join": 640213,
+            "kecamatan": "Samboja",
+            "positif_penduduk": 1011,
+            "positif_bukan_penduduk": 14,
+            "kasus_positif": 1025,
+            "kasus_aktif": 57,
+            "kasus_sembuh": 957,
+            "kasus_meninggal": 11,
+            "date": "2021-07-07"
+        }
+    },
+    {
+        "attributes": {
+            "id": 68,
+            "kode_join": 640214,
+            "kecamatan": "Muara jawa",
+            "positif_penduduk": 586,
+            "positif_bukan_penduduk": 30,
+            "kasus_positif": 616,
+            "kasus_aktif": 19,
+            "kasus_sembuh": 595,
+            "kasus_meninggal": 2,
+            "date": "2021-07-07"
+        }
+    },
+    {
+        "attributes": {
+            "id": 69,
+            "kode_join": 640215,
+            "kecamatan": "Sanga Sanga",
+            "positif_penduduk": 295,
+            "positif_bukan_penduduk": 7,
+            "kasus_positif": 302,
+            "kasus_aktif": 25,
+            "kasus_sembuh": 272,
+            "kasus_meninggal": 5,
+            "date": "2021-07-07"
+        }
+    },
+    {
+        "attributes": {
+            "id": 70,
+            "kode_join": 640216,
+            "kecamatan": "Tenggarong Seberang",
+            "positif_penduduk": 1529,
+            "positif_bukan_penduduk": 85,
+            "kasus_positif": 1614,
+            "kasus_aktif": 81,
+            "kasus_sembuh": 1507,
+            "kasus_meninggal": 26,
+            "date": "2021-07-07"
+        }
+    },
+    {
+        "attributes": {
+            "id": 71,
+            "kode_join": 640217,
+            "kecamatan": "Marangkayu",
+            "positif_penduduk": 347,
+            "positif_bukan_penduduk": 3,
+            "kasus_positif": 350,
+            "kasus_aktif": 27,
+            "kasus_sembuh": 318,
+            "kasus_meninggal": 5,
+            "date": "2021-07-07"
+        }
+    },
+    {
+        "attributes": {
+            "id": 72,
+            "kode_join": 640218,
+            "kecamatan": "Muara Wis",
+            "positif_penduduk": 56,
+            "positif_bukan_penduduk": 0,
+            "kasus_positif": 56,
+            "kasus_aktif": 0,
+            "kasus_sembuh": 56,
+            "kasus_meninggal": 0,
+            "date": "2021-07-07"
+        }
+    },
+    {
+        "attributes": {
+            "id": 73,
+            "kode_join": 640201,
+            "kecamatan": "Muara Muntai",
+            "positif_penduduk": 97,
+            "positif_bukan_penduduk": 0,
+            "kasus_positif": 97,
+            "kasus_aktif": 4,
+            "kasus_sembuh": 92,
+            "kasus_meninggal": 1,
+            "date": "2021-07-08"
+        }
+    },
+    {
+        "attributes": {
+            "id": 74,
+            "kode_join": 640202,
+            "kecamatan": "Loa Kulu",
+            "positif_penduduk": 700,
+            "positif_bukan_penduduk": 24,
+            "kasus_positif": 724,
+            "kasus_aktif": 75,
+            "kasus_sembuh": 629,
+            "kasus_meninggal": 20,
+            "date": "2021-07-08"
+        }
+    },
+    {
+        "attributes": {
+            "id": 75,
+            "kode_join": 640203,
+            "kecamatan": "Loa Janan",
+            "positif_penduduk": 754,
+            "positif_bukan_penduduk": 17,
+            "kasus_positif": 771,
+            "kasus_aktif": 37,
+            "kasus_sembuh": 732,
+            "kasus_meninggal": 2,
+            "date": "2021-07-08"
+        }
+    },
+    {
+        "attributes": {
+            "id": 76,
+            "kode_join": 640204,
+            "kecamatan": "Anggana",
+            "positif_penduduk": 332,
+            "positif_bukan_penduduk": 43,
+            "kasus_positif": 375,
+            "kasus_aktif": 30,
+            "kasus_sembuh": 340,
+            "kasus_meninggal": 5,
+            "date": "2021-07-08"
+        }
+    },
+    {
+        "attributes": {
+            "id": 77,
+            "kode_join": 640205,
+            "kecamatan": "Muara Badak",
+            "positif_penduduk": 699,
+            "positif_bukan_penduduk": 2,
+            "kasus_positif": 701,
+            "kasus_aktif": 110,
+            "kasus_sembuh": 582,
+            "kasus_meninggal": 9,
+            "date": "2021-07-08"
+        }
+    },
+    {
+        "attributes": {
+            "id": 78,
+            "kode_join": 640206,
+            "kecamatan": "Tenggarong",
+            "positif_penduduk": 4879,
+            "positif_bukan_penduduk": 17,
+            "kasus_positif": 4896,
+            "kasus_aktif": 335,
+            "kasus_sembuh": 4463,
+            "kasus_meninggal": 98,
+            "date": "2021-07-08"
+        }
+    },
+    {
+        "attributes": {
+            "id": 79,
+            "kode_join": 640207,
+            "kecamatan": "Sebulu",
+            "positif_penduduk": 682,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 683,
+            "kasus_aktif": 45,
+            "kasus_sembuh": 620,
+            "kasus_meninggal": 18,
+            "date": "2021-07-08"
+        }
+    },
+    {
+        "attributes": {
+            "id": 80,
+            "kode_join": 640208,
+            "kecamatan": "Kota Bangun",
+            "positif_penduduk": 251,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 252,
+            "kasus_aktif": 8,
+            "kasus_sembuh": 239,
+            "kasus_meninggal": 5,
+            "date": "2021-07-08"
+        }
+    },
+    {
+        "attributes": {
+            "id": 81,
+            "kode_join": 640209,
+            "kecamatan": "Kenohan",
+            "positif_penduduk": 102,
+            "positif_bukan_penduduk": 10,
+            "kasus_positif": 112,
+            "kasus_aktif": 7,
+            "kasus_sembuh": 103,
+            "kasus_meninggal": 2,
+            "date": "2021-07-08"
+        }
+    },
+    {
+        "attributes": {
+            "id": 82,
+            "kode_join": 640210,
+            "kecamatan": "Kembang Janggut",
+            "positif_penduduk": 251,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 252,
+            "kasus_aktif": 3,
+            "kasus_sembuh": 242,
+            "kasus_meninggal": 7,
+            "date": "2021-07-08"
+        }
+    },
+    {
+        "attributes": {
+            "id": 83,
+            "kode_join": 640211,
+            "kecamatan": "Muara Kaman",
+            "positif_penduduk": 234,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 235,
+            "kasus_aktif": 19,
+            "kasus_sembuh": 209,
+            "kasus_meninggal": 7,
+            "date": "2021-07-08"
+        }
+    },
+    {
+        "attributes": {
+            "id": 84,
+            "kode_join": 640212,
+            "kecamatan": "Tabang",
+            "positif_penduduk": 372,
+            "positif_bukan_penduduk": 39,
+            "kasus_positif": 411,
+            "kasus_aktif": 12,
+            "kasus_sembuh": 398,
+            "kasus_meninggal": 1,
+            "date": "2021-07-08"
+        }
+    },
+    {
+        "attributes": {
+            "id": 85,
+            "kode_join": 640213,
+            "kecamatan": "Samboja",
+            "positif_penduduk": 1031,
+            "positif_bukan_penduduk": 14,
+            "kasus_positif": 1045,
+            "kasus_aktif": 77,
+            "kasus_sembuh": 957,
+            "kasus_meninggal": 11,
+            "date": "2021-07-08"
+        }
+    },
+    {
+        "attributes": {
+            "id": 86,
+            "kode_join": 640214,
+            "kecamatan": "Muara jawa",
+            "positif_penduduk": 592,
+            "positif_bukan_penduduk": 30,
+            "kasus_positif": 622,
+            "kasus_aktif": 25,
+            "kasus_sembuh": 595,
+            "kasus_meninggal": 2,
+            "date": "2021-07-08"
+        }
+    },
+    {
+        "attributes": {
+            "id": 87,
+            "kode_join": 640215,
+            "kecamatan": "Sanga Sanga",
+            "positif_penduduk": 308,
+            "positif_bukan_penduduk": 7,
+            "kasus_positif": 315,
+            "kasus_aktif": 37,
+            "kasus_sembuh": 272,
+            "kasus_meninggal": 6,
+            "date": "2021-07-08"
+        }
+    },
+    {
+        "attributes": {
+            "id": 88,
+            "kode_join": 640216,
+            "kecamatan": "Tenggarong Seberang",
+            "positif_penduduk": 1547,
+            "positif_bukan_penduduk": 85,
+            "kasus_positif": 1632,
+            "kasus_aktif": 105,
+            "kasus_sembuh": 1500,
+            "kasus_meninggal": 27,
+            "date": "2021-07-08"
+        }
+    },
+    {
+        "attributes": {
+            "id": 89,
+            "kode_join": 640217,
+            "kecamatan": "Marangkayu",
+            "positif_penduduk": 363,
+            "positif_bukan_penduduk": 3,
+            "kasus_positif": 366,
+            "kasus_aktif": 43,
+            "kasus_sembuh": 318,
+            "kasus_meninggal": 5,
+            "date": "2021-07-08"
+        }
+    },
+    {
+        "attributes": {
+            "id": 90,
+            "kode_join": 640218,
+            "kecamatan": "Muara Wis",
+            "positif_penduduk": 56,
+            "positif_bukan_penduduk": 0,
+            "kasus_positif": 56,
+            "kasus_aktif": 0,
+            "kasus_sembuh": 56,
+            "kasus_meninggal": 0,
+            "date": "2021-07-08"
+        }
+    },
+    {
+        "attributes": {
+            "id": 91,
+            "kode_join": 640201,
+            "kecamatan": "Muara Muntai",
+            "positif_penduduk": 97,
+            "positif_bukan_penduduk": 0,
+            "kasus_positif": 97,
+            "kasus_aktif": 4,
+            "kasus_sembuh": 92,
+            "kasus_meninggal": 1,
+            "date": "2021-07-09"
+        }
+    },
+    {
+        "attributes": {
+            "id": 92,
+            "kode_join": 640202,
+            "kecamatan": "Loa Kulu",
+            "positif_penduduk": 720,
+            "positif_bukan_penduduk": 24,
+            "kasus_positif": 744,
+            "kasus_aktif": 94,
+            "kasus_sembuh": 630,
+            "kasus_meninggal": 20,
+            "date": "2021-07-09"
+        }
+    },
+    {
+        "attributes": {
+            "id": 93,
+            "kode_join": 640203,
+            "kecamatan": "Loa Janan",
+            "positif_penduduk": 763,
+            "positif_bukan_penduduk": 17,
+            "kasus_positif": 780,
+            "kasus_aktif": 42,
+            "kasus_sembuh": 736,
+            "kasus_meninggal": 2,
+            "date": "2021-07-09"
+        }
+    },
+    {
+        "attributes": {
+            "id": 94,
+            "kode_join": 640204,
+            "kecamatan": "Anggana",
+            "positif_penduduk": 342,
+            "positif_bukan_penduduk": 43,
+            "kasus_positif": 385,
+            "kasus_aktif": 36,
+            "kasus_sembuh": 344,
+            "kasus_meninggal": 5,
+            "date": "2021-07-09"
+        }
+    },
+    {
+        "attributes": {
+            "id": 95,
+            "kode_join": 640205,
+            "kecamatan": "Muara Badak",
+            "positif_penduduk": 710,
+            "positif_bukan_penduduk": 2,
+            "kasus_positif": 712,
+            "kasus_aktif": 115,
+            "kasus_sembuh": 588,
+            "kasus_meninggal": 9,
+            "date": "2021-07-09"
+        }
+    },
+    {
+        "attributes": {
+            "id": 96,
+            "kode_join": 640206,
+            "kecamatan": "Tenggarong",
+            "positif_penduduk": 4909,
+            "positif_bukan_penduduk": 17,
+            "kasus_positif": 4926,
+            "kasus_aktif": 359,
+            "kasus_sembuh": 4469,
+            "kasus_meninggal": 98,
+            "date": "2021-07-09"
+        }
+    },
+    {
+        "attributes": {
+            "id": 97,
+            "kode_join": 640207,
+            "kecamatan": "Sebulu",
+            "positif_penduduk": 683,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 684,
+            "kasus_aktif": 46,
+            "kasus_sembuh": 620,
+            "kasus_meninggal": 18,
+            "date": "2021-07-09"
+        }
+    },
+    {
+        "attributes": {
+            "id": 98,
+            "kode_join": 640208,
+            "kecamatan": "Kota Bangun",
+            "positif_penduduk": 252,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 253,
+            "kasus_aktif": 9,
+            "kasus_sembuh": 239,
+            "kasus_meninggal": 5,
+            "date": "2021-07-09"
+        }
+    },
+    {
+        "attributes": {
+            "id": 99,
+            "kode_join": 640209,
+            "kecamatan": "Kenohan",
+            "positif_penduduk": 102,
+            "positif_bukan_penduduk": 10,
+            "kasus_positif": 112,
+            "kasus_aktif": 7,
+            "kasus_sembuh": 103,
+            "kasus_meninggal": 2,
+            "date": "2021-07-09"
+        }
+    },
+    {
+        "attributes": {
+            "id": 100,
+            "kode_join": 640210,
+            "kecamatan": "Kembang Janggut",
+            "positif_penduduk": 253,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 254,
+            "kasus_aktif": 5,
+            "kasus_sembuh": 242,
+            "kasus_meninggal": 7,
+            "date": "2021-07-09"
+        }
+    },
+    {
+        "attributes": {
+            "id": 101,
+            "kode_join": 640211,
+            "kecamatan": "Muara Kaman",
+            "positif_penduduk": 236,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 237,
+            "kasus_aktif": 20,
+            "kasus_sembuh": 210,
+            "kasus_meninggal": 7,
+            "date": "2021-07-09"
+        }
+    },
+    {
+        "attributes": {
+            "id": 102,
+            "kode_join": 640212,
+            "kecamatan": "Tabang",
+            "positif_penduduk": 373,
+            "positif_bukan_penduduk": 39,
+            "kasus_positif": 412,
+            "kasus_aktif": 13,
+            "kasus_sembuh": 398,
+            "kasus_meninggal": 1,
+            "date": "2021-07-09"
+        }
+    },
+    {
+        "attributes": {
+            "id": 103,
+            "kode_join": 640213,
+            "kecamatan": "Samboja",
+            "positif_penduduk": 1033,
+            "positif_bukan_penduduk": 14,
+            "kasus_positif": 1047,
+            "kasus_aktif": 79,
+            "kasus_sembuh": 957,
+            "kasus_meninggal": 11,
+            "date": "2021-07-09"
+        }
+    },
+    {
+        "attributes": {
+            "id": 104,
+            "kode_join": 640214,
+            "kecamatan": "Muara jawa",
+            "positif_penduduk": 594,
+            "positif_bukan_penduduk": 30,
+            "kasus_positif": 624,
+            "kasus_aktif": 27,
+            "kasus_sembuh": 595,
+            "kasus_meninggal": 2,
+            "date": "2021-07-09"
+        }
+    },
+    {
+        "attributes": {
+            "id": 105,
+            "kode_join": 640215,
+            "kecamatan": "Sanga Sanga",
+            "positif_penduduk": 331,
+            "positif_bukan_penduduk": 7,
+            "kasus_positif": 338,
+            "kasus_aktif": 60,
+            "kasus_sembuh": 272,
+            "kasus_meninggal": 6,
+            "date": "2021-07-09"
+        }
+    },
+    {
+        "attributes": {
+            "id": 106,
+            "kode_join": 640216,
+            "kecamatan": "Tenggarong Seberang",
+            "positif_penduduk": 1558,
+            "positif_bukan_penduduk": 85,
+            "kasus_positif": 1643,
+            "kasus_aktif": 100,
+            "kasus_sembuh": 1516,
+            "kasus_meninggal": 27,
+            "date": "2021-07-09"
+        }
+    },
+    {
+        "attributes": {
+            "id": 107,
+            "kode_join": 640217,
+            "kecamatan": "Marangkayu",
+            "positif_penduduk": 363,
+            "positif_bukan_penduduk": 3,
+            "kasus_positif": 366,
+            "kasus_aktif": 46,
+            "kasus_sembuh": 315,
+            "kasus_meninggal": 5,
+            "date": "2021-07-09"
+        }
+    },
+    {
+        "attributes": {
+            "id": 108,
+            "kode_join": 640218,
+            "kecamatan": "Muara Wis",
+            "positif_penduduk": 56,
+            "positif_bukan_penduduk": 0,
+            "kasus_positif": 56,
+            "kasus_aktif": 0,
+            "kasus_sembuh": 56,
+            "kasus_meninggal": 0,
+            "date": "2021-07-09"
+        }
+    },
+    {
+        "attributes": {
+            "id": 109,
+            "kode_join": 640201,
+            "kecamatan": "Muara Muntai",
+            "positif_penduduk": 98,
+            "positif_bukan_penduduk": 0,
+            "kasus_positif": 98,
+            "kasus_aktif": 0,
+            "kasus_sembuh": 97,
+            "kasus_meninggal": 1,
+            "date": "2021-07-10"
+        }
+    },
+    {
+        "attributes": {
+            "id": 110,
+            "kode_join": 640202,
+            "kecamatan": "Loa Kulu",
+            "positif_penduduk": 739,
+            "positif_bukan_penduduk": 24,
+            "kasus_positif": 763,
+            "kasus_aktif": 108,
+            "kasus_sembuh": 635,
+            "kasus_meninggal": 20,
+            "date": "2021-07-10"
+        }
+    },
+    {
+        "attributes": {
+            "id": 111,
+            "kode_join": 640203,
+            "kecamatan": "Loa Janan",
+            "positif_penduduk": 779,
+            "positif_bukan_penduduk": 17,
+            "kasus_positif": 796,
+            "kasus_aktif": 56,
+            "kasus_sembuh": 738,
+            "kasus_meninggal": 2,
+            "date": "2021-07-10"
+        }
+    },
+    {
+        "attributes": {
+            "id": 112,
+            "kode_join": 640204,
+            "kecamatan": "Anggana",
+            "positif_penduduk": 348,
+            "positif_bukan_penduduk": 43,
+            "kasus_positif": 391,
+            "kasus_aktif": 41,
+            "kasus_sembuh": 345,
+            "kasus_meninggal": 5,
+            "date": "2021-07-10"
+        }
+    },
+    {
+        "attributes": {
+            "id": 113,
+            "kode_join": 640205,
+            "kecamatan": "Muara Badak",
+            "positif_penduduk": 725,
+            "positif_bukan_penduduk": 2,
+            "kasus_positif": 727,
+            "kasus_aktif": 123,
+            "kasus_sembuh": 594,
+            "kasus_meninggal": 10,
+            "date": "2021-07-10"
+        }
+    },
+    {
+        "attributes": {
+            "id": 114,
+            "kode_join": 640206,
+            "kecamatan": "Tenggarong",
+            "positif_penduduk": 4958,
+            "positif_bukan_penduduk": 17,
+            "kasus_positif": 4975,
+            "kasus_aktif": 399,
+            "kasus_sembuh": 4478,
+            "kasus_meninggal": 98,
+            "date": "2021-07-10"
+        }
+    },
+    {
+        "attributes": {
+            "id": 115,
+            "kode_join": 640207,
+            "kecamatan": "Sebulu",
+            "positif_penduduk": 700,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 701,
+            "kasus_aktif": 63,
+            "kasus_sembuh": 620,
+            "kasus_meninggal": 18,
+            "date": "2021-07-10"
+        }
+    },
+    {
+        "attributes": {
+            "id": 116,
+            "kode_join": 640208,
+            "kecamatan": "Kota Bangun",
+            "positif_penduduk": 253,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 254,
+            "kasus_aktif": 10,
+            "kasus_sembuh": 239,
+            "kasus_meninggal": 5,
+            "date": "2021-07-10"
+        }
+    },
+    {
+        "attributes": {
+            "id": 117,
+            "kode_join": 640209,
+            "kecamatan": "Kenohan",
+            "positif_penduduk": 102,
+            "positif_bukan_penduduk": 10,
+            "kasus_positif": 112,
+            "kasus_aktif": 7,
+            "kasus_sembuh": 103,
+            "kasus_meninggal": 2,
+            "date": "2021-07-10"
+        }
+    },
+    {
+        "attributes": {
+            "id": 118,
+            "kode_join": 640210,
+            "kecamatan": "Kembang Janggut",
+            "positif_penduduk": 254,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 255,
+            "kasus_aktif": 6,
+            "kasus_sembuh": 242,
+            "kasus_meninggal": 7,
+            "date": "2021-07-10"
+        }
+    },
+    {
+        "attributes": {
+            "id": 119,
+            "kode_join": 640211,
+            "kecamatan": "Muara Kaman",
+            "positif_penduduk": 242,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 243,
+            "kasus_aktif": 24,
+            "kasus_sembuh": 212,
+            "kasus_meninggal": 7,
+            "date": "2021-07-10"
+        }
+    },
+    {
+        "attributes": {
+            "id": 120,
+            "kode_join": 640212,
+            "kecamatan": "Tabang",
+            "positif_penduduk": 373,
+            "positif_bukan_penduduk": 39,
+            "kasus_positif": 412,
+            "kasus_aktif": 12,
+            "kasus_sembuh": 399,
+            "kasus_meninggal": 1,
+            "date": "2021-07-10"
+        }
+    },
+    {
+        "attributes": {
+            "id": 121,
+            "kode_join": 640213,
+            "kecamatan": "Samboja",
+            "positif_penduduk": 1042,
+            "positif_bukan_penduduk": 14,
+            "kasus_positif": 1056,
+            "kasus_aktif": 82,
+            "kasus_sembuh": 963,
+            "kasus_meninggal": 11,
+            "date": "2021-07-10"
+        }
+    },
+    {
+        "attributes": {
+            "id": 122,
+            "kode_join": 640214,
+            "kecamatan": "Muara jawa",
+            "positif_penduduk": 598,
+            "positif_bukan_penduduk": 30,
+            "kasus_positif": 628,
+            "kasus_aktif": 28,
+            "kasus_sembuh": 598,
+            "kasus_meninggal": 2,
+            "date": "2021-07-10"
+        }
+    },
+    {
+        "attributes": {
+            "id": 123,
+            "kode_join": 640215,
+            "kecamatan": "Sanga Sanga",
+            "positif_penduduk": 343,
+            "positif_bukan_penduduk": 7,
+            "kasus_positif": 350,
+            "kasus_aktif": 67,
+            "kasus_sembuh": 276,
+            "kasus_meninggal": 7,
+            "date": "2021-07-10"
+        }
+    },
+    {
+        "attributes": {
+            "id": 124,
+            "kode_join": 640216,
+            "kecamatan": "Tenggarong Seberang",
+            "positif_penduduk": 1576,
+            "positif_bukan_penduduk": 85,
+            "kasus_positif": 1661,
+            "kasus_aktif": 112,
+            "kasus_sembuh": 1522,
+            "kasus_meninggal": 27,
+            "date": "2021-07-10"
+        }
+    },
+    {
+        "attributes": {
+            "id": 125,
+            "kode_join": 640217,
+            "kecamatan": "Marangkayu",
+            "positif_penduduk": 372,
+            "positif_bukan_penduduk": 3,
+            "kasus_positif": 375,
+            "kasus_aktif": 112,
+            "kasus_sembuh": 258,
+            "kasus_meninggal": 5,
+            "date": "2021-07-10"
+        }
+    },
+    {
+        "attributes": {
+            "id": 126,
+            "kode_join": 640218,
+            "kecamatan": "Muara Wis",
+            "positif_penduduk": 56,
+            "positif_bukan_penduduk": 0,
+            "kasus_positif": 56,
+            "kasus_aktif": 51,
+            "kasus_sembuh": 5,
+            "kasus_meninggal": 0,
+            "date": "2021-07-10"
+        }
+    },
+    {
+        "attributes": {
+            "id": 127,
+            "kode_join": 640201,
+            "kecamatan": "Muara Muntai",
+            "positif_penduduk": 98,
+            "positif_bukan_penduduk": 0,
+            "kasus_positif": 98,
+            "kasus_aktif": 4,
+            "kasus_sembuh": 93,
+            "kasus_meninggal": 1,
+            "date": "2021-07-11"
+        }
+    },
+    {
+        "attributes": {
+            "id": 128,
+            "kode_join": 640202,
+            "kecamatan": "Loa Kulu",
+            "positif_penduduk": 757,
+            "positif_bukan_penduduk": 24,
+            "kasus_positif": 781,
+            "kasus_aktif": 119,
+            "kasus_sembuh": 642,
+            "kasus_meninggal": 20,
+            "date": "2021-07-11"
+        }
+    },
+    {
+        "attributes": {
+            "id": 129,
+            "kode_join": 640203,
+            "kecamatan": "Loa Janan",
+            "positif_penduduk": 789,
+            "positif_bukan_penduduk": 17,
+            "kasus_positif": 806,
+            "kasus_aktif": 65,
+            "kasus_sembuh": 739,
+            "kasus_meninggal": 2,
+            "date": "2021-07-11"
+        }
+    },
+    {
+        "attributes": {
+            "id": 130,
+            "kode_join": 640204,
+            "kecamatan": "Anggana",
+            "positif_penduduk": 358,
+            "positif_bukan_penduduk": 43,
+            "kasus_positif": 401,
+            "kasus_aktif": 51,
+            "kasus_sembuh": 345,
+            "kasus_meninggal": 5,
+            "date": "2021-07-11"
+        }
+    },
+    {
+        "attributes": {
+            "id": 131,
+            "kode_join": 640205,
+            "kecamatan": "Muara Badak",
+            "positif_penduduk": 744,
+            "positif_bukan_penduduk": 2,
+            "kasus_positif": 746,
+            "kasus_aktif": 141,
+            "kasus_sembuh": 594,
+            "kasus_meninggal": 11,
+            "date": "2021-07-11"
+        }
+    },
+    {
+        "attributes": {
+            "id": 132,
+            "kode_join": 640206,
+            "kecamatan": "Tenggarong",
+            "positif_penduduk": 5014,
+            "positif_bukan_penduduk": 17,
+            "kasus_positif": 5031,
+            "kasus_aktif": 446,
+            "kasus_sembuh": 4487,
+            "kasus_meninggal": 98,
+            "date": "2021-07-11"
+        }
+    },
+    {
+        "attributes": {
+            "id": 133,
+            "kode_join": 640207,
+            "kecamatan": "Sebulu",
+            "positif_penduduk": 706,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 707,
+            "kasus_aktif": 68,
+            "kasus_sembuh": 621,
+            "kasus_meninggal": 18,
+            "date": "2021-07-11"
+        }
+    },
+    {
+        "attributes": {
+            "id": 134,
+            "kode_join": 640208,
+            "kecamatan": "Kota Bangun",
+            "positif_penduduk": 254,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 255,
+            "kasus_aktif": 7,
+            "kasus_sembuh": 243,
+            "kasus_meninggal": 5,
+            "date": "2021-07-11"
+        }
+    },
+    {
+        "attributes": {
+            "id": 135,
+            "kode_join": 640209,
+            "kecamatan": "Kenohan",
+            "positif_penduduk": 102,
+            "positif_bukan_penduduk": 10,
+            "kasus_positif": 112,
+            "kasus_aktif": 6,
+            "kasus_sembuh": 104,
+            "kasus_meninggal": 2,
+            "date": "2021-07-11"
+        }
+    },
+    {
+        "attributes": {
+            "id": 136,
+            "kode_join": 640210,
+            "kecamatan": "Kembang Janggut",
+            "positif_penduduk": 254,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 255,
+            "kasus_aktif": 6,
+            "kasus_sembuh": 242,
+            "kasus_meninggal": 7,
+            "date": "2021-07-11"
+        }
+    },
+    {
+        "attributes": {
+            "id": 137,
+            "kode_join": 640211,
+            "kecamatan": "Muara Kaman",
+            "positif_penduduk": 256,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 257,
+            "kasus_aktif": 20,
+            "kasus_sembuh": 230,
+            "kasus_meninggal": 7,
+            "date": "2021-07-11"
+        }
+    },
+    {
+        "attributes": {
+            "id": 138,
+            "kode_join": 640212,
+            "kecamatan": "Tabang",
+            "positif_penduduk": 373,
+            "positif_bukan_penduduk": 39,
+            "kasus_positif": 412,
+            "kasus_aktif": 12,
+            "kasus_sembuh": 399,
+            "kasus_meninggal": 1,
+            "date": "2021-07-11"
+        }
+    },
+    {
+        "attributes": {
+            "id": 139,
+            "kode_join": 640213,
+            "kecamatan": "Samboja",
+            "positif_penduduk": 1057,
+            "positif_bukan_penduduk": 14,
+            "kasus_positif": 1071,
+            "kasus_aktif": 93,
+            "kasus_sembuh": 967,
+            "kasus_meninggal": 11,
+            "date": "2021-07-11"
+        }
+    },
+    {
+        "attributes": {
+            "id": 140,
+            "kode_join": 640214,
+            "kecamatan": "Muara jawa",
+            "positif_penduduk": 598,
+            "positif_bukan_penduduk": 30,
+            "kasus_positif": 628,
+            "kasus_aktif": 41,
+            "kasus_sembuh": 584,
+            "kasus_meninggal": 3,
+            "date": "2021-07-11"
+        }
+    },
+    {
+        "attributes": {
+            "id": 141,
+            "kode_join": 640215,
+            "kecamatan": "Sanga Sanga",
+            "positif_penduduk": 347,
+            "positif_bukan_penduduk": 7,
+            "kasus_positif": 354,
+            "kasus_aktif": 71,
+            "kasus_sembuh": 276,
+            "kasus_meninggal": 7,
+            "date": "2021-07-11"
+        }
+    },
+    {
+        "attributes": {
+            "id": 142,
+            "kode_join": 640216,
+            "kecamatan": "Tenggarong Seberang",
+            "positif_penduduk": 1605,
+            "positif_bukan_penduduk": 85,
+            "kasus_positif": 1690,
+            "kasus_aktif": 134,
+            "kasus_sembuh": 1527,
+            "kasus_meninggal": 29,
+            "date": "2021-07-11"
+        }
+    },
+    {
+        "attributes": {
+            "id": 143,
+            "kode_join": 640217,
+            "kecamatan": "Marangkayu",
+            "positif_penduduk": 377,
+            "positif_bukan_penduduk": 3,
+            "kasus_positif": 380,
+            "kasus_aktif": 56,
+            "kasus_sembuh": 319,
+            "kasus_meninggal": 5,
+            "date": "2021-07-11"
+        }
+    },
+    {
+        "attributes": {
+            "id": 144,
+            "kode_join": 640218,
+            "kecamatan": "Muara Wis",
+            "positif_penduduk": 56,
+            "positif_bukan_penduduk": 0,
+            "kasus_positif": 56,
+            "kasus_aktif": 0,
+            "kasus_sembuh": 56,
+            "kasus_meninggal": 0,
+            "date": "2021-07-11"
+        }
+    },
+    {
+        "attributes": {
+            "id": 145,
+            "kode_join": 640201,
+            "kecamatan": "Muara Muntai",
+            "positif_penduduk": 113,
+            "positif_bukan_penduduk": 0,
+            "kasus_positif": 113,
+            "kasus_aktif": 19,
+            "kasus_sembuh": 93,
+            "kasus_meninggal": 1,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 146,
+            "kode_join": 640202,
+            "kecamatan": "Loa Kulu",
+            "positif_penduduk": 757,
+            "positif_bukan_penduduk": 24,
+            "kasus_positif": 796,
+            "kasus_aktif": 133,
+            "kasus_sembuh": 643,
+            "kasus_meninggal": 20,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 147,
+            "kode_join": 640203,
+            "kecamatan": "Loa Janan",
+            "positif_penduduk": 799,
+            "positif_bukan_penduduk": 17,
+            "kasus_positif": 816,
+            "kasus_aktif": 74,
+            "kasus_sembuh": 740,
+            "kasus_meninggal": 2,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 148,
+            "kode_join": 640204,
+            "kecamatan": "Anggana",
+            "positif_penduduk": 361,
+            "positif_bukan_penduduk": 43,
+            "kasus_positif": 404,
+            "kasus_aktif": 54,
+            "kasus_sembuh": 345,
+            "kasus_meninggal": 5,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 149,
+            "kode_join": 640205,
+            "kecamatan": "Muara Badak",
+            "positif_penduduk": 748,
+            "positif_bukan_penduduk": 2,
+            "kasus_positif": 750,
+            "kasus_aktif": 142,
+            "kasus_sembuh": 597,
+            "kasus_meninggal": 11,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 150,
+            "kode_join": 640206,
+            "kecamatan": "Tenggarong",
+            "positif_penduduk": 5052,
+            "positif_bukan_penduduk": 17,
+            "kasus_positif": 5069,
+            "kasus_aktif": 471,
+            "kasus_sembuh": 4499,
+            "kasus_meninggal": 99,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 151,
+            "kode_join": 640207,
+            "kecamatan": "Sebulu",
+            "positif_penduduk": 715,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 716,
+            "kasus_aktif": 77,
+            "kasus_sembuh": 621,
+            "kasus_meninggal": 18,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 152,
+            "kode_join": 640208,
+            "kecamatan": "Kota Bangun",
+            "positif_penduduk": 255,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 256,
+            "kasus_aktif": 8,
+            "kasus_sembuh": 243,
+            "kasus_meninggal": 5,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 153,
+            "kode_join": 640209,
+            "kecamatan": "Kenohan",
+            "positif_penduduk": 102,
+            "positif_bukan_penduduk": 10,
+            "kasus_positif": 112,
+            "kasus_aktif": 6,
+            "kasus_sembuh": 104,
+            "kasus_meninggal": 2,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 154,
+            "kode_join": 640210,
+            "kecamatan": "Kembang Janggut",
+            "positif_penduduk": 256,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 257,
+            "kasus_aktif": 8,
+            "kasus_sembuh": 242,
+            "kasus_meninggal": 7,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 155,
+            "kode_join": 640211,
+            "kecamatan": "Muara Kaman",
+            "positif_penduduk": 263,
+            "positif_bukan_penduduk": 1,
+            "kasus_positif": 264,
+            "kasus_aktif": 27,
+            "kasus_sembuh": 230,
+            "kasus_meninggal": 7,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 156,
+            "kode_join": 640212,
+            "kecamatan": "Tabang",
+            "positif_penduduk": 374,
+            "positif_bukan_penduduk": 39,
+            "kasus_positif": 413,
+            "kasus_aktif": 12,
+            "kasus_sembuh": 400,
+            "kasus_meninggal": 1,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 157,
+            "kode_join": 640213,
+            "kecamatan": "Samboja",
+            "positif_penduduk": 1076,
+            "positif_bukan_penduduk": 17,
+            "kasus_positif": 1093,
+            "kasus_aktif": 108,
+            "kasus_sembuh": 974,
+            "kasus_meninggal": 11,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 158,
+            "kode_join": 640214,
+            "kecamatan": "Muara Jawa",
+            "positif_penduduk": 600,
+            "positif_bukan_penduduk": 30,
+            "kasus_positif": 630,
+            "kasus_aktif": 43,
+            "kasus_sembuh": 584,
+            "kasus_meninggal": 3,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 159,
+            "kode_join": 640215,
+            "kecamatan": "Sanga Sanga",
+            "positif_penduduk": 357,
+            "positif_bukan_penduduk": 7,
+            "kasus_positif": 364,
+            "kasus_aktif": 81,
+            "kasus_sembuh": 276,
+            "kasus_meninggal": 7,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 160,
+            "kode_join": 640216,
+            "kecamatan": "Tenggarong Seberang",
+            "positif_penduduk": 1644,
+            "positif_bukan_penduduk": 85,
+            "kasus_positif": 1729,
+            "kasus_aktif": 167,
+            "kasus_sembuh": 1533,
+            "kasus_meninggal": 29,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 161,
+            "kode_join": 640217,
+            "kecamatan": "Marangkayu",
+            "positif_penduduk": 280,
+            "positif_bukan_penduduk": 3,
+            "kasus_positif": 383,
+            "kasus_aktif": 58,
+            "kasus_sembuh": 320,
+            "kasus_meninggal": 5,
+            "date": "2021-07-12"
+        }
+    },
+    {
+        "attributes": {
+            "id": 162,
+            "kode_join": 640218,
+            "kecamatan": "Muara Wis",
+            "positif_penduduk": 58,
+            "positif_bukan_penduduk": 0,
+            "kasus_positif": 58,
+            "kasus_aktif": 1,
+            "kasus_sembuh": 57,
+            "kasus_meninggal": 0,
+            "date": "2021-07-12"
+        }
+    }
+]
+                        </code></pre>
+
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <h3>Menampilkan Peta webgis Covid-19 KUTAI KARTANEGARA</h3>
+            <p>Quick Start Guide</p>
+
+            <div class="card mt-3">
+                <div class="card-header" id="headingOne">
+                    <i class="mb-0">
+                    <button class="btn btn-info collapsed mr-2" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                        CODE
+                    </button>
+                    /KutaiKartanegara/webgisstatuspandemic
+                    </i>
+                </div>
+                <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
+                    <div class="card-body">
+                        
+                        <h5 class="text-info">Usage</h5>
+                        <p>Get last update of Covid-19 Kutai Kartanegara.</p>
+                        <hr>
+                        <h5 class="text-info">Request URL For Json</h5>
+                        <code>http://geoportal.kukarkab.go.id:8088/leaflet.js</code>
+                        <hr>
+                        <h5 class="text-info">Sample page Code</h5>
+                        <code>http://geoportal.kukarkab.go.id:8088/leafletjs/</code>
+
+                    </div>
+                </div>
+            </div>
+            
+
+</body>
+</html>
